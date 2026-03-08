@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07E6079804B14A8C7C67E958 /* PathHitTesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC790C7376BBF4FFFF7281C /* PathHitTesterTests.swift */; };
+		25188BCE07488418C467A503 /* QuizRecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B862900120B7121B29497FAB /* QuizRecordStore.swift */; };
+		29D22F726BBDEA0FDBD3C390 /* SVGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5036828ECBF1F37C93CB02FF /* SVGPathParser.swift */; };
+		2EC5BAF798F22FE308AFF192 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA83573532D420877B69B7E /* QuizViewModel.swift */; };
+		359FD4D8FA38D6CC73BADAB2 /* MapSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B6DCB52ED1E463A0679FF /* MapSelectionView.swift */; };
+		389F73BC3AC655D89C01A798 /* QuizRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A4AD12F65173A06001B9 /* QuizRecord.swift */; };
+		3F3FA23237F54A9D133A53A4 /* MapCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86047A3F164A4A514D1E1944 /* MapCardView.swift */; };
+		5B1905356D684E5F40D2B550 /* ScoreIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CFE99E6CCA309585B8FE /* ScoreIndicatorView.swift */; };
+		6D201612218B481581B9560E /* MapCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1137842547E2A0EEE2A8AD4 /* MapCanvasView.swift */; };
+		87890F17CC74AD30A84D601E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C901D45178A7399930E927 /* ContentView.swift */; };
+		96B8F9C3BC22CCE704E046BD /* QuestionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ADF29DFB6AC107F9536B7C /* QuestionBarView.swift */; };
+		9B7484A84F1C52C4582EE610 /* MapDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BCFDBCAF0D1E452BBDFC4F /* MapDefinition.swift */; };
+		A5F2D7FA4BDEF96870D4448B /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F949C1B44BE5163FADAE2438 /* ResultViewModel.swift */; };
+		ADBDCE40955F35BE42531C22 /* MapDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BE257F214785F94B226E50 /* MapDataLoader.swift */; };
+		AF6BAB35FCA65C1E59859A30 /* MapSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF69AACA4914925DFA45E78 /* MapSelectionViewModel.swift */; };
+		B40CD04213ED833AF77FAD30 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE6F0EBFAB1FAFB0408F235 /* QuizView.swift */; };
+		BEE0C89E24A343447E3F3C37 /* WhiteMapQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E735A05B2AF95118EC4F5F3 /* WhiteMapQuizApp.swift */; };
+		C5453B527420B2EA9781D105 /* QuizSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC182D531D7BE98F99957BD /* QuizSession.swift */; };
+		C57D3B15416AAAC25924C9B4 /* RecordHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D15D110D04E98DC63EFE3 /* RecordHistoryView.swift */; };
+		D2BB626B834ECDBC337DFD8B /* RegionDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5576FB23816975E4A67F99 /* RegionDefinition.swift */; };
+		DC4AE496E118C01C3470A379 /* PathHitTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC48CE7891DE52578CB384F /* PathHitTester.swift */; };
+		E0B54DB42D65E6C074D037C9 /* SVGPathParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7104A90EBE81AA7D23768D85 /* SVGPathParserTests.swift */; };
+		E38ED8AC877EAC28AE3350EB /* Color+Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C3E883541930FD07290415 /* Color+Quiz.swift */; };
+		EDACD02BB74CF1AD113F4FC5 /* KANAGAWA.json in Resources */ = {isa = PBXBuildFile; fileRef = 517F231E557CEE121BC5826D /* KANAGAWA.json */; };
+		F9F8708812BA7B1B516E2855 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F89CFE38766C6CF72AA5D1 /* ResultView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F2837D3955CF3AE25CEABA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CC2FDC88BC83409F7768554 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB8EBEFAE36C282261C6122;
+			remoteInfo = WhiteMapQuiz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16ADF29DFB6AC107F9536B7C /* QuestionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBarView.swift; sourceTree = "<group>"; };
+		1CE6F0EBFAB1FAFB0408F235 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		1FC790C7376BBF4FFFF7281C /* PathHitTesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathHitTesterTests.swift; sourceTree = "<group>"; };
+		3E735A05B2AF95118EC4F5F3 /* WhiteMapQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMapQuizApp.swift; sourceTree = "<group>"; };
+		4550A29769DF40871F6841F0 /* WhiteMapQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteMapQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5036828ECBF1F37C93CB02FF /* SVGPathParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGPathParser.swift; sourceTree = "<group>"; };
+		517F231E557CEE121BC5826D /* KANAGAWA.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = KANAGAWA.json; sourceTree = "<group>"; };
+		5DF69AACA4914925DFA45E78 /* MapSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionViewModel.swift; sourceTree = "<group>"; };
+		7104A90EBE81AA7D23768D85 /* SVGPathParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGPathParserTests.swift; sourceTree = "<group>"; };
+		86047A3F164A4A514D1E1944 /* MapCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCardView.swift; sourceTree = "<group>"; };
+		8E30CFE99E6CCA309585B8FE /* ScoreIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreIndicatorView.swift; sourceTree = "<group>"; };
+		9FF4A4AD12F65173A06001B9 /* QuizRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRecord.swift; sourceTree = "<group>"; };
+		A2C901D45178A7399930E927 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A6BE257F214785F94B226E50 /* MapDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataLoader.swift; sourceTree = "<group>"; };
+		ACA83573532D420877B69B7E /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		ACC182D531D7BE98F99957BD /* QuizSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSession.swift; sourceTree = "<group>"; };
+		B1137842547E2A0EEE2A8AD4 /* MapCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCanvasView.swift; sourceTree = "<group>"; };
+		B862900120B7121B29497FAB /* QuizRecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRecordStore.swift; sourceTree = "<group>"; };
+		B97D15D110D04E98DC63EFE3 /* RecordHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryView.swift; sourceTree = "<group>"; };
+		C2C3E883541930FD07290415 /* Color+Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Quiz.swift"; sourceTree = "<group>"; };
+		C874B7F5F7B7E55707373C7A /* WhiteMapQuizTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WhiteMapQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3BCFDBCAF0D1E452BBDFC4F /* MapDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDefinition.swift; sourceTree = "<group>"; };
+		DEC48CE7891DE52578CB384F /* PathHitTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathHitTester.swift; sourceTree = "<group>"; };
+		E1F89CFE38766C6CF72AA5D1 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		F70B6DCB52ED1E463A0679FF /* MapSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionView.swift; sourceTree = "<group>"; };
+		F949C1B44BE5163FADAE2438 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		FD5576FB23816975E4A67F99 /* RegionDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionDefinition.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0C8A44FEFB192306CB769AAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4550A29769DF40871F6841F0 /* WhiteMapQuiz.app */,
+				C874B7F5F7B7E55707373C7A /* WhiteMapQuizTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C793BBA41B3B49948FD5C80 /* WhiteMapQuizTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FC790C7376BBF4FFFF7281C /* PathHitTesterTests.swift */,
+				7104A90EBE81AA7D23768D85 /* SVGPathParserTests.swift */,
+			);
+			path = WhiteMapQuizTests;
+			sourceTree = "<group>";
+		};
+		1C8BEDEB220C83A432CD7398 = {
+			isa = PBXGroup;
+			children = (
+				C5C3B069797D9894E0DB25ED /* WhiteMapQuiz */,
+				1C793BBA41B3B49948FD5C80 /* WhiteMapQuizTests */,
+				0C8A44FEFB192306CB769AAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		339DA5F0C354CD1A84D417BA /* MapData */ = {
+			isa = PBXGroup;
+			children = (
+				517F231E557CEE121BC5826D /* KANAGAWA.json */,
+			);
+			path = MapData;
+			sourceTree = "<group>";
+		};
+		35188AF00C6F0F0305A718BB /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				B97D15D110D04E98DC63EFE3 /* RecordHistoryView.swift */,
+				E1F89CFE38766C6CF72AA5D1 /* ResultView.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		3C9A3F6E26A142BB965C6AD2 /* MapSelection */ = {
+			isa = PBXGroup;
+			children = (
+				86047A3F164A4A514D1E1944 /* MapCardView.swift */,
+				F70B6DCB52ED1E463A0679FF /* MapSelectionView.swift */,
+			);
+			path = MapSelection;
+			sourceTree = "<group>";
+		};
+		40FEBC78BE469C87DD9FF82F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C2C3E883541930FD07290415 /* Color+Quiz.swift */,
+				5036828ECBF1F37C93CB02FF /* SVGPathParser.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4B8B16BC7F5CF7BEB3465F32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				339DA5F0C354CD1A84D417BA /* MapData */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		676FEF9E7C1757ED5C8179CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3BCFDBCAF0D1E452BBDFC4F /* MapDefinition.swift */,
+				9FF4A4AD12F65173A06001B9 /* QuizRecord.swift */,
+				ACC182D531D7BE98F99957BD /* QuizSession.swift */,
+				FD5576FB23816975E4A67F99 /* RegionDefinition.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67C02D3237D3D58167C57EC4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A2C901D45178A7399930E927 /* ContentView.swift */,
+				3E735A05B2AF95118EC4F5F3 /* WhiteMapQuizApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7540F1675AF3BF91AF577319 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				B1137842547E2A0EEE2A8AD4 /* MapCanvasView.swift */,
+				16ADF29DFB6AC107F9536B7C /* QuestionBarView.swift */,
+				1CE6F0EBFAB1FAFB0408F235 /* QuizView.swift */,
+				8E30CFE99E6CCA309585B8FE /* ScoreIndicatorView.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		A66CA7FF9D1E379A83F093EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C9A3F6E26A142BB965C6AD2 /* MapSelection */,
+				7540F1675AF3BF91AF577319 /* Quiz */,
+				35188AF00C6F0F0305A718BB /* Result */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5C3B069797D9894E0DB25ED /* WhiteMapQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				67C02D3237D3D58167C57EC4 /* App */,
+				676FEF9E7C1757ED5C8179CF /* Models */,
+				4B8B16BC7F5CF7BEB3465F32 /* Resources */,
+				EB6C3D8A7B77AF39C503736E /* Services */,
+				40FEBC78BE469C87DD9FF82F /* Utilities */,
+				D44FF24059147DB7A2CDE841 /* ViewModels */,
+				A66CA7FF9D1E379A83F093EE /* Views */,
+			);
+			path = WhiteMapQuiz;
+			sourceTree = "<group>";
+		};
+		D44FF24059147DB7A2CDE841 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5DF69AACA4914925DFA45E78 /* MapSelectionViewModel.swift */,
+				ACA83573532D420877B69B7E /* QuizViewModel.swift */,
+				F949C1B44BE5163FADAE2438 /* ResultViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EB6C3D8A7B77AF39C503736E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A6BE257F214785F94B226E50 /* MapDataLoader.swift */,
+				DEC48CE7891DE52578CB384F /* PathHitTester.swift */,
+				B862900120B7121B29497FAB /* QuizRecordStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1B68009C5FED9FB81392DFA /* WhiteMapQuizTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E762240C9EC53BA51B0ECD3 /* Build configuration list for PBXNativeTarget "WhiteMapQuizTests" */;
+			buildPhases = (
+				E5D526EB5BBED671D36787E9 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C05849273CB591E6C646A00B /* PBXTargetDependency */,
+			);
+			name = WhiteMapQuizTests;
+			packageProductDependencies = (
+			);
+			productName = WhiteMapQuizTests;
+			productReference = C874B7F5F7B7E55707373C7A /* WhiteMapQuizTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDB8EBEFAE36C282261C6122 /* WhiteMapQuiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E1BC67BD94C577882DC389 /* Build configuration list for PBXNativeTarget "WhiteMapQuiz" */;
+			buildPhases = (
+				A7A17E662635ED367539AC66 /* Sources */,
+				422DA66E61722841AA07817C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhiteMapQuiz;
+			packageProductDependencies = (
+			);
+			productName = WhiteMapQuiz;
+			productReference = 4550A29769DF40871F6841F0 /* WhiteMapQuiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CC2FDC88BC83409F7768554 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = B68178D0109D607145D434F6 /* Build configuration list for PBXProject "WhiteMapQuiz" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 1C8BEDEB220C83A432CD7398;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDB8EBEFAE36C282261C6122 /* WhiteMapQuiz */,
+				A1B68009C5FED9FB81392DFA /* WhiteMapQuizTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		422DA66E61722841AA07817C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDACD02BB74CF1AD113F4FC5 /* KANAGAWA.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7A17E662635ED367539AC66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38ED8AC877EAC28AE3350EB /* Color+Quiz.swift in Sources */,
+				87890F17CC74AD30A84D601E /* ContentView.swift in Sources */,
+				6D201612218B481581B9560E /* MapCanvasView.swift in Sources */,
+				3F3FA23237F54A9D133A53A4 /* MapCardView.swift in Sources */,
+				ADBDCE40955F35BE42531C22 /* MapDataLoader.swift in Sources */,
+				9B7484A84F1C52C4582EE610 /* MapDefinition.swift in Sources */,
+				359FD4D8FA38D6CC73BADAB2 /* MapSelectionView.swift in Sources */,
+				AF6BAB35FCA65C1E59859A30 /* MapSelectionViewModel.swift in Sources */,
+				DC4AE496E118C01C3470A379 /* PathHitTester.swift in Sources */,
+				96B8F9C3BC22CCE704E046BD /* QuestionBarView.swift in Sources */,
+				389F73BC3AC655D89C01A798 /* QuizRecord.swift in Sources */,
+				25188BCE07488418C467A503 /* QuizRecordStore.swift in Sources */,
+				C5453B527420B2EA9781D105 /* QuizSession.swift in Sources */,
+				B40CD04213ED833AF77FAD30 /* QuizView.swift in Sources */,
+				2EC5BAF798F22FE308AFF192 /* QuizViewModel.swift in Sources */,
+				C57D3B15416AAAC25924C9B4 /* RecordHistoryView.swift in Sources */,
+				D2BB626B834ECDBC337DFD8B /* RegionDefinition.swift in Sources */,
+				F9F8708812BA7B1B516E2855 /* ResultView.swift in Sources */,
+				A5F2D7FA4BDEF96870D4448B /* ResultViewModel.swift in Sources */,
+				29D22F726BBDEA0FDBD3C390 /* SVGPathParser.swift in Sources */,
+				5B1905356D684E5F40D2B550 /* ScoreIndicatorView.swift in Sources */,
+				BEE0C89E24A343447E3F3C37 /* WhiteMapQuizApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D526EB5BBED671D36787E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E6079804B14A8C7C67E958 /* PathHitTesterTests.swift in Sources */,
+				E0B54DB42D65E6C074D037C9 /* SVGPathParserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C05849273CB591E6C646A00B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDB8EBEFAE36C282261C6122 /* WhiteMapQuiz */;
+			targetProxy = 2F2837D3955CF3AE25CEABA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DCBF27402555DD4295D02A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 955R9G9JU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitemap.WhiteMapQuiz;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		61142BC3FE8D31755389CAB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9DF4A84C5E129DF9B6809764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 955R9G9JU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitemap.WhiteMapQuiz;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A09EDDDF36856CE29C1BC973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A0D13D93FB9EF13CA33CC130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitemap.WhiteMapQuizTests;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteMapQuiz.app/Contents/MacOS/WhiteMapQuiz";
+			};
+			name = Debug;
+		};
+		D5197A01936D66B240EB747B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitemap.WhiteMapQuizTests;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteMapQuiz.app/Contents/MacOS/WhiteMapQuiz";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07E1BC67BD94C577882DC389 /* Build configuration list for PBXNativeTarget "WhiteMapQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF4A84C5E129DF9B6809764 /* Debug */,
+				1DCBF27402555DD4295D02A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5E762240C9EC53BA51B0ECD3 /* Build configuration list for PBXNativeTarget "WhiteMapQuizTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D13D93FB9EF13CA33CC130 /* Debug */,
+				D5197A01936D66B240EB747B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B68178D0109D607145D434F6 /* Build configuration list for PBXProject "WhiteMapQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A09EDDDF36856CE29C1BC973 /* Debug */,
+				61142BC3FE8D31755389CAB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CC2FDC88BC83409F7768554 /* Project object */;
+}
