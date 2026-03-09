@@ -29,5 +29,8 @@ struct MapSelectionView: View {
         .onAppear {
             viewModel.loadMaps(modelContext: modelContext)
         }
+        .onChange(of: navigationPath) {
+            viewModel.loadMaps(modelContext: modelContext)
+        }
     }
 }

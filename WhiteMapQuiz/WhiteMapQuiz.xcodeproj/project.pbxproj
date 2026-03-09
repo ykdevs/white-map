@@ -32,6 +32,7 @@
 		E38ED8AC877EAC28AE3350EB /* Color+Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C3E883541930FD07290415 /* Color+Quiz.swift */; };
 		EDACD02BB74CF1AD113F4FC5 /* KANAGAWA.json in Resources */ = {isa = PBXBuildFile; fileRef = 517F231E557CEE121BC5826D /* KANAGAWA.json */; };
 		F9F8708812BA7B1B516E2855 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F89CFE38766C6CF72AA5D1 /* ResultView.swift */; };
+		A1B2C3D4E5F60718192A3B4C /* TOKYO.json in Resources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F6071819A2B3C4D5 /* TOKYO.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		4550A29769DF40871F6841F0 /* WhiteMapQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteMapQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5036828ECBF1F37C93CB02FF /* SVGPathParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGPathParser.swift; sourceTree = "<group>"; };
 		517F231E557CEE121BC5826D /* KANAGAWA.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = KANAGAWA.json; sourceTree = "<group>"; };
+		B2C3D4E5F6071819A2B3C4D5 /* TOKYO.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TOKYO.json; sourceTree = "<group>"; };
 		5DF69AACA4914925DFA45E78 /* MapSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionViewModel.swift; sourceTree = "<group>"; };
 		7104A90EBE81AA7D23768D85 /* SVGPathParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGPathParserTests.swift; sourceTree = "<group>"; };
 		86047A3F164A4A514D1E1944 /* MapCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCardView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				517F231E557CEE121BC5826D /* KANAGAWA.json */,
+				B2C3D4E5F6071819A2B3C4D5 /* TOKYO.json */,
 			);
 			path = MapData;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDACD02BB74CF1AD113F4FC5 /* KANAGAWA.json in Resources */,
+				A1B2C3D4E5F60718192A3B4C /* TOKYO.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

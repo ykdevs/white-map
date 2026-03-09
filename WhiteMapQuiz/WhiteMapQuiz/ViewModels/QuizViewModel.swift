@@ -60,13 +60,31 @@ class QuizViewModel {
         return Double(correctCount) / Double(totalAttempts)
     }
 
+    /// 飛び地ID → 本体IDのマッピング
+    private let parentIdMap: [String: String]
+
     init(mapDefinition: MapDefinition) {
         self.mapDefinition = mapDefinition
         self.hitTester = PathHitTester(regions: mapDefinition.regions)
-        self.questionOrder = mapDefinition.regions.shuffled()
+
+        // 飛び地（parentIdあり）は出題対象から除外
+        self.questionOrder = mapDefinition.regions
+            .filter { $0.parentId == nil }
+            .shuffled()
+
+        // 飛び地 → 本体IDのマッピングを構築
+        var parentMap: [String: String] = [:]
+        for region in mapDefinition.regions {
+            if let parentId = region.parentId {
+                parentMap[region.id] = parentId
+            }
+        }
+        self.parentIdMap = parentMap
 
         for region in mapDefinition.regions {
-            regionStates[region.id] = .unanswered
+            if region.parentId == nil {
+                regionStates[region.id] = .unanswered
+            }
         }
     }
 
@@ -95,15 +113,18 @@ class QuizViewModel {
             return
         }
 
+        // 飛び地をタップした場合は本体IDに解決
+        let effectiveId = parentIdMap[tappedRegion.id] ?? tappedRegion.id
+
         // 既に回答済みの領域は無視
-        if let state = regionStates[tappedRegion.id], state != .unanswered {
+        if let state = regionStates[effectiveId], state != .unanswered {
             return
         }
 
-        if tappedRegion.id == currentQuestion.id {
+        if effectiveId == currentQuestion.id {
             // 正答
             let attempt = attempts + 1
-            regionStates[tappedRegion.id] = .correct(attempt: attempt)
+            regionStates[effectiveId] = .correct(attempt: attempt)
             lastTapCorrect = true
             advanceToNext()
         } else {
