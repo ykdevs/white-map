@@ -32,6 +32,7 @@ targets:
       - path: WhiteMapQuiz/Resources
     settings:
       base:
+        DEVELOPMENT_TEAM: 955R9G9JU9
         PRODUCT_BUNDLE_IDENTIFIER: com.whitemap.WhiteMapQuiz
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
