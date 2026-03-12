@@ -14,6 +14,7 @@
 		359FD4D8FA38D6CC73BADAB2 /* MapSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70B6DCB52ED1E463A0679FF /* MapSelectionView.swift */; };
 		389F73BC3AC655D89C01A798 /* QuizRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A4AD12F65173A06001B9 /* QuizRecord.swift */; };
 		3F3FA23237F54A9D133A53A4 /* MapCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86047A3F164A4A514D1E1944 /* MapCardView.swift */; };
+		58B418BCC8AFC24F5E714FD7 /* ASIA.json in Resources */ = {isa = PBXBuildFile; fileRef = 33FA6A00F20E3506D78E1BFA /* ASIA.json */; };
 		5B1905356D684E5F40D2B550 /* ScoreIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CFE99E6CCA309585B8FE /* ScoreIndicatorView.swift */; };
 		6D201612218B481581B9560E /* MapCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1137842547E2A0EEE2A8AD4 /* MapCanvasView.swift */; };
 		80BC31AE484F1B0E58C13852 /* USA.json in Resources */ = {isa = PBXBuildFile; fileRef = B2B9F997E13423592DC2F175 /* USA.json */; };
@@ -50,6 +51,7 @@
 		16ADF29DFB6AC107F9536B7C /* QuestionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBarView.swift; sourceTree = "<group>"; };
 		1CE6F0EBFAB1FAFB0408F235 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		1FC790C7376BBF4FFFF7281C /* PathHitTesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathHitTesterTests.swift; sourceTree = "<group>"; };
+		33FA6A00F20E3506D78E1BFA /* ASIA.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ASIA.json; sourceTree = "<group>"; };
 		35D36EFA88377209B4C7B301 /* TOKYO.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TOKYO.json; sourceTree = "<group>"; };
 		3E735A05B2AF95118EC4F5F3 /* WhiteMapQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMapQuizApp.swift; sourceTree = "<group>"; };
 		4550A29769DF40871F6841F0 /* WhiteMapQuiz.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = WhiteMapQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 		339DA5F0C354CD1A84D417BA /* MapData */ = {
 			isa = PBXGroup;
 			children = (
+				33FA6A00F20E3506D78E1BFA /* ASIA.json */,
 				517F231E557CEE121BC5826D /* KANAGAWA.json */,
 				35D36EFA88377209B4C7B301 /* TOKYO.json */,
 				B2B9F997E13423592DC2F175 /* USA.json */,
@@ -304,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B418BCC8AFC24F5E714FD7 /* ASIA.json in Resources */,
 				EDACD02BB74CF1AD113F4FC5 /* KANAGAWA.json in Resources */,
 				D2A691D3E430A7B1D6675429 /* TOKYO.json in Resources */,
 				80BC31AE484F1B0E58C13852 /* USA.json in Resources */,

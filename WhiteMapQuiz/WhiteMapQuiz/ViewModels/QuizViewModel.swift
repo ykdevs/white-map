@@ -62,15 +62,14 @@ class QuizViewModel {
 
     /// 飛び地ID → 本体IDのマッピング
     private let parentIdMap: [String: String]
+    /// グループID → 代表領域IDのマッピング
+    private let groupRepresentativeMap: [String: String]
+    /// 領域ID → グループIDのマッピング（グループに属する出題対象のみ）
+    private let regionGroupMap: [String: String]
 
     init(mapDefinition: MapDefinition) {
         self.mapDefinition = mapDefinition
         self.hitTester = PathHitTester(regions: mapDefinition.regions)
-
-        // 飛び地（parentIdあり）は出題対象から除外
-        self.questionOrder = mapDefinition.regions
-            .filter { $0.parentId == nil }
-            .shuffled()
 
         // 飛び地 → 本体IDのマッピングを構築
         var parentMap: [String: String] = [:]
@@ -81,10 +80,33 @@ class QuizViewModel {
         }
         self.parentIdMap = parentMap
 
+        // グループマッピングを構築
+        // 同じgroupIdを持つ出題対象領域のうち、最初の1つを代表とする
+        var groupRep: [String: String] = [:]
+        var regGroup: [String: String] = [:]
         for region in mapDefinition.regions {
-            if region.parentId == nil {
-                regionStates[region.id] = .unanswered
+            guard region.parentId == nil, let gid = region.groupId else { continue }
+            regGroup[region.id] = gid
+            if groupRep[gid] == nil {
+                groupRep[gid] = region.id
             }
+        }
+        self.groupRepresentativeMap = groupRep
+        self.regionGroupMap = regGroup
+
+        // 出題対象: 飛び地を除外し、グループは代表のみ
+        self.questionOrder = mapDefinition.regions
+            .filter { $0.parentId == nil }
+            .filter { region in
+                if let gid = region.groupId {
+                    return groupRep[gid] == region.id
+                }
+                return true
+            }
+            .shuffled()
+
+        for region in questionOrder {
+            regionStates[region.id] = .unanswered
         }
     }
 
@@ -116,15 +138,24 @@ class QuizViewModel {
         // 飛び地をタップした場合は本体IDに解決
         let effectiveId = parentIdMap[tappedRegion.id] ?? tappedRegion.id
 
+        // グループに属する場合は代表IDに解決
+        let resolvedId: String
+        if let gid = regionGroupMap[effectiveId],
+           let repId = groupRepresentativeMap[gid] {
+            resolvedId = repId
+        } else {
+            resolvedId = effectiveId
+        }
+
         // 既に回答済みの領域は無視
-        if let state = regionStates[effectiveId], state != .unanswered {
+        if let state = regionStates[resolvedId], state != .unanswered {
             return
         }
 
-        if effectiveId == currentQuestion.id {
+        if resolvedId == currentQuestion.id {
             // 正答
             let attempt = attempts + 1
-            regionStates[effectiveId] = .correct(attempt: attempt)
+            regionStates[resolvedId] = .correct(attempt: attempt)
             lastTapCorrect = true
             advanceToNext()
         } else {
@@ -145,6 +176,15 @@ class QuizViewModel {
             isFinished = true
             stop()
         }
+    }
+
+    /// 領域IDをグループ代表IDに解決する（グループに属さない場合はそのまま返す）
+    func resolveGroupId(_ regionId: String) -> String {
+        if let gid = regionGroupMap[regionId],
+           let repId = groupRepresentativeMap[gid] {
+            return repId
+        }
+        return regionId
     }
 
     func formattedTime(_ time: TimeInterval? = nil) -> String {

@@ -23,9 +23,10 @@ struct MapCanvasView: View {
             ZStack {
                 // 地図領域の描画
                 ForEach(viewModel.mapDefinition.regions) { region in
-                    // 飛び地は本体の状態に連動
+                    // 飛び地は本体の状態に連動、グループは代表の状態に連動
                     let effectiveId = region.parentId ?? region.id
-                    let state = viewModel.regionStates[effectiveId] ?? .unanswered
+                    let resolvedId = viewModel.resolveGroupId(effectiveId)
+                    let state = viewModel.regionStates[resolvedId] ?? .unanswered
                     let cgPath = SVGPathParser.parse(region.svgPath)
 
                     Path(cgPath)
